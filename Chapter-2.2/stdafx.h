@@ -37,5 +37,3 @@ typedef struct sqList {
 }sqList;
 
 
-
-
