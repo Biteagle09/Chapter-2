@@ -11,7 +11,7 @@ void InitSqlist(sqList& sql) {
 
 
 //Produce many random number
-//param arr[] £º saving these randrom number in this arr[]
+//param arr[] £º saving these random number in this arr[]
 //param count :  The total number of random Numbers
 //param limit :  The upper limit of these random Numbers
 void randMy(int arr[], int count, int limit) {
