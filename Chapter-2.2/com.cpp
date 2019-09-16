@@ -19,7 +19,6 @@ void randMy(int arr[], int count, int limit) {
 	for (int x = 0; x < count; x++) {
 		arr[x] = random(limit);
 	}
-
 }
 
 

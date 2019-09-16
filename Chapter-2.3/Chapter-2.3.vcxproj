@@ -25,6 +25,7 @@
   <ItemGroup>
     <ClCompile Include="2.3.1_deleteX.cpp" />
     <ClCompile Include="ADT.cpp" />
+    <ClCompile Include="com.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -1,5 +1,5 @@
 #pragma once
-
+#define MaxSize 10000
 
 // stdafx.h : 标准系统包含文件的包含文件，
 // 或是经常使用但不常更改的
@@ -36,14 +36,7 @@
 typedef struct LNode {
 	int data;
 	struct LNode *next;;
-}*LinkList,LNode;
-
-
-//单向循环链表
-typedef struct LCirNode {
-	int data;
-	struct LCirNode*next;
-};
+}LNode, *LinkList;
 
 
 
@@ -52,16 +45,7 @@ typedef struct DNode {
 	int data;
 	struct DNode* prior; //前驱指针
 	struct DNode* next;  //后继指针
-};
-
-
-
-//双向循环链表
-typedef struct DCirNode {
-	int data;
-	struct DCirNode* prior; //前驱指针
-	struct DCirNode* next;  //后继指针
-};
+}DNode, *DLinkList;
 
 
 
@@ -69,7 +53,7 @@ typedef struct DCirNode {
 typedef struct StNode {
 	int data;
 	int next;
-};
+}SLinkList[MaxSize];
 
 
 
