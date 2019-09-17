@@ -32,6 +32,7 @@
 
 
 //线性表链式结构体的定义
+
 //单链表
 typedef struct LNode {
 	int data;
@@ -42,7 +43,7 @@ typedef struct LNode {
 
 //双链表
 typedef struct DNode {
-	int data;
+	int data;  //数据域
 	struct DNode* prior; //前驱指针
 	struct DNode* next;  //后继指针
 }DNode, *DLinkList;

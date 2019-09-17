@@ -28,7 +28,7 @@ void increasingList(int arr[], int count, int maxNumber) {
 
 
 void printArray(int arr[], int len) {
-	printf("arr[%d]£º{", len);
+	printf("int Array[%d]={", len);
 	for (int i = 0; i < len; i++) {
 		if (i < len - 1) {
 			printf("%d,", arr[i]);
