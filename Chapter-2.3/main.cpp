@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 9
-#define limit 100
+#define len 5
+#define limit 10
 
 int arr[len];
 
@@ -17,10 +17,12 @@ int main() {
 	//}
 	//printLinkList(L1);
 
-	int Array[9] = { 72,43,62,60,44,16,1,27,94 };
+
+
+	//int Array[9] = { 72,43,62,60,44,16,1,27,94 };
 	DLinkList L3 = createDLinkListH();
-	for (int i = 0; i < 9; i++){
-		insertDNodeByHead(L3, Array[i]);
+	for (int i = 0; i < len; i++) {
+		insertDNodeByTail(L3, arr[i]);
 	}
 	printDLinkList(L3);
 }

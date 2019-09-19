@@ -16,7 +16,7 @@ LNode* createNode(int data) {
 //1-2、创建一个双向链表的结点
 DNode* createDNode(int data) {
 	DNode *newDNode = (DNode*)malloc(sizeof(DNode));
-	if (newDNode) {
+	if (newDNode){
 		newDNode->prior = newDNode->next = NULL;
 		newDNode->data = data;
 	}
@@ -48,7 +48,7 @@ LinkList** createLinkList() {
 
 //2-3、创建一个带头结点的双向链表
 DLinkList createDLinkListH() {
-	DLinkList headNode = (DLinkList)malloc(sizeof(DLinkList));
+	DLinkList headNode = (DLinkList)malloc(sizeof(DNode));
 	if (headNode){
 		headNode->next = headNode->prior = NULL;
 	}
@@ -90,6 +90,10 @@ void insertLNodeByTail(LinkList &L, int data){
 //3-3、头插法向双链表里插入数据
 void insertDNodeByHead(DLinkList &DL, int data) {
 	DNode *newNode = createDNode(data);
+	newNode->next = DL->next;
+	if (DL->next != NULL) {
+		DL->next->prior = newNode;
+	}
 	DL->next = newNode;
 	newNode->prior = DL;
 }
@@ -98,7 +102,11 @@ void insertDNodeByHead(DLinkList &DL, int data) {
 //3-4、尾插法向双链表里插入数据
 void insertDNodeByTail(DLinkList& DL, int data) {
 	DNode* newNode = createDNode(data);
-
+	DNode* tailNode = DL;
+	while (tailNode->next){
+		tailNode = tailNode->next;
+	}
+	tailNode->next = newNode;
 }
 
 
