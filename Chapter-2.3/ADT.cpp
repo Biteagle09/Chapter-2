@@ -15,11 +15,10 @@ LNode* createNode(int data) {
 
 //1-2、创建一个双向链表的结点
 DNode* createDNode(int data) {
-	DNode* newDNode = (DNode*)malloc(sizeof(DNode));
+	DNode *newDNode = (DNode*)malloc(sizeof(DNode));
 	if (newDNode) {
+		newDNode->prior = newDNode->next = NULL;
 		newDNode->data = data;
-		newDNode->prior = NULL;
-		newDNode->next = NULL;
 	}
 	return newDNode;
 }
@@ -48,17 +47,22 @@ LinkList** createLinkList() {
 
 
 //2-3、创建一个带头结点的双向链表
-DLinkList createDLinkList() {
+DLinkList createDLinkListH() {
 	DLinkList headNode = (DLinkList)malloc(sizeof(DLinkList));
 	if (headNode){
-		headNode->next = NULL;
-		headNode->prior = NULL;
+		headNode->next = headNode->prior = NULL;
 	}
 	return headNode;
 };
 
 //2-4、创建一个不带头结点的双向链表
-
+DLinkList* createDLinkList() {
+	DLinkList *headNode = (DLinkList*)malloc(sizeof(DLinkList*));
+	if (headNode) {
+		headNode = NULL;
+	}
+	return headNode;
+}
 
 
 
@@ -84,20 +88,23 @@ void insertLNodeByTail(LinkList &L, int data){
 
 
 //3-3、头插法向双链表里插入数据
-void insertDNodeByHead() {
-
+void insertDNodeByHead(DLinkList &DL, int data) {
+	DNode *newNode = createDNode(data);
+	DL->next = newNode;
+	newNode->prior = DL;
 }
 
 
 //3-4、尾插法向双链表里插入数据
-void insertDNodeByTail() {
+void insertDNodeByTail(DLinkList& DL, int data) {
+	DNode* newNode = createDNode(data);
 
 }
 
 
 
 
-//5、从头至尾打印链表
+//4-1、从头至尾打印单链表
 void printLinkList(LinkList L) {
 	LNode* p = L->next;
 	while (p->next) {
@@ -108,3 +115,12 @@ void printLinkList(LinkList L) {
 }
 
 
+//4-2、从头至尾打印双链表
+void printDLinkList(DLinkList DL) {
+	DNode* p = DL->next;
+	while (p->next) {
+		printf("%d-->", p->data);
+		p = p->next;
+	}
+	printf("%d\n", p->data);
+}
