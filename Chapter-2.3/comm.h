@@ -24,4 +24,6 @@ void quickSort(int arr[], int low, int high);
 
 
 //algorithm function 
-extern void DeleteX(LinkList &L, int x);
+extern void DeleteXOfRecursion(LinkList& L, int x);  //Ã‚2.3.1
+extern void DeleteX_1(LinkList& L, int x);  //Ã‚2.3.2
+extern void DeleteX_2(LinkList& L, int x);  //Ã‚2.3.2

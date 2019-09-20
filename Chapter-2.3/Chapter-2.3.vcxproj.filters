@@ -29,10 +29,13 @@
     <ClCompile Include="ADT.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="2.3.1_deleteX.cpp">
+    <ClCompile Include="com.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="com.cpp">
+    <ClCompile Include="2.3.2_deleteX.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="2.3.1_deleteX_recursion.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
