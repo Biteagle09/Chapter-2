@@ -1,20 +1,24 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 10
-#define limit 15
+#define len 5
+#define limit 20
 static int arr[len];
 // = {12,12,34,45,46,12,34,12,56,20,12,12}
+
 //测试函数的声明
 void test_231();
 void test_232();
+void test_233();
+
+
 int main() {
 	
  	randMy(arr, len, limit); //生成随机测试数据
  	printArray(arr,len);
  	printf("*************************上面是数组，下面是链表*************************\n\n");
 	//test_231();
-	test_232();
-
+	//test_232();
+	test_233();
 
 
 
@@ -36,7 +40,7 @@ void test_231() {
 
 
 
-//题2.3.1_deleteXOfRecursion
+//题2.3.2_deleteX
 void test_232() {
 	LinkList L1 = createLinkListH();
 	LinkList L2 = createLinkListH();
@@ -49,4 +53,16 @@ void test_232() {
  	printf("*************************上面是方法1，下面是方法2*************************\n");
  	DeleteX_2(L2, 6);
  	printLinkList(L2);
+}
+
+
+
+
+//题2.3.3_reverseOutput
+void test_233() {
+	LinkList L = createLinkListH();
+	for (int i = 0; i < len; i++) {
+		insertLNodeByTail(L, arr[i]);
+	}
+	ReverseOutput(L->next);
 }
