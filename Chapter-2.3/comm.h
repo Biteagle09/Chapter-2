@@ -24,3 +24,4 @@ void quickSort(int arr[], int low, int high);
 
 
 //algorithm function 
+extern void DeleteX(LinkList &L, int x);
