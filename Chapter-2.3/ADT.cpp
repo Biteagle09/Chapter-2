@@ -133,3 +133,16 @@ void printDLinkList(DLinkList DL) {
 	}
 	printf("%d\n", p->data);
 }
+
+//4-3、从尾至头部打印双链表
+void printDlinkListInvert(DLinkList DL) {
+	DNode* p = DL->next;
+	while (p->next){
+		p = p->next;
+	}
+	while (p->prior != DL){
+		printf("%d-->", p->data);
+		p = p->prior;
+	}
+	printf("%d\n",p->data);
+}

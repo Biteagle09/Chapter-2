@@ -17,6 +17,7 @@ void insertDNodeByHead(DLinkList& DL, int data);
 void insertDNodeByTail(DLinkList& DL, int data);
 void printLinkList(LinkList L);
 void printDLinkList(DLinkList DL);
+void printDlinkListInvert(DLinkList DL);
 
 
 
