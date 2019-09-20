@@ -107,6 +107,7 @@ void insertDNodeByTail(DLinkList& DL, int data) {
 		tailNode = tailNode->next;
 	}
 	tailNode->next = newNode;
+	newNode->prior = tailNode;
 }
 
 
