@@ -9,6 +9,17 @@
 3¡ã£º£»
 **********************************************************************************************/
 
-void DeleteMin(LinkList L) {
-
+void DeleteMin(LinkList& L) {
+	LNode* pre = L, *p = pre->next;
+	LNode* minPre = pre, *minP = p;
+	while (p) {
+		if (p->data < minP->data) {
+			minP = p;
+			minPre = pre;
+		}
+		pre = p;
+		p = p->next;
+	}
+	minPre->next = minP->next;
+	free(minP);
 }

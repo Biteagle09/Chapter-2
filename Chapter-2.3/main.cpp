@@ -1,25 +1,28 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 5
-#define limit 20
+#define len 9
+#define limit 100
 static int arr[len];
-// = {12,12,34,45,46,12,34,12,56,20,12,12}
+// = {11,21,2,14,20}
 
 //测试函数的声明
 void test_231();
 void test_232();
 void test_233();
-
+void test_234();
 
 int main() {
 	
- 	randMy(arr, len, limit); //生成随机测试数据
+
+	randMy(arr, len, limit); //生成随机测试数据
  	printArray(arr,len);
- 	printf("*************************上面是数组，下面是链表*************************\n\n");
+ 	//printf("*************************上面是数组，下面是链表*************************\n\n");
 	//test_231();
 	//test_232();
-	test_233();
-
+	//test_233();
+	test_234();
+	
+ 	
 
 
 
@@ -65,4 +68,17 @@ void test_233() {
 		insertLNodeByTail(L, arr[i]);
 	}
 	ReverseOutput(L->next);
+}
+
+
+
+//题2.3.4_deleteMin
+void test_234() {
+	LinkList L = createLinkListH();
+	for (int i = 0; i < len; i++) {
+		insertLNodeByTail(L, arr[i]);
+	}
+	printLinkList(L);
+	DeleteMin(L);
+	printLinkList(L);
 }
