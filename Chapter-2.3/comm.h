@@ -27,4 +27,5 @@ void quickSort(int arr[], int low, int high);
 extern void DeleteXOfRecursion(LinkList& L, int x);  //题2.3.1
 extern void DeleteX_1(LinkList& L, int x);  //题2.3.2
 extern void DeleteX_2(LinkList& L, int x);  //题2.3.2
-extern void ReverseOutput(LinkList L);
+extern void ReverseOutput(LinkList L);  //题2.3.3
+extern void DeleteMin(LinkList L);  //题2.3.4

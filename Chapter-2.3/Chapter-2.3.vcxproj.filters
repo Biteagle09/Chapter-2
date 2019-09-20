@@ -41,5 +41,8 @@
     <ClCompile Include="2.3.3_reverseOutput.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="2.3.4_deleteMin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
