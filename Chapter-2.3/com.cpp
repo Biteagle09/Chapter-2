@@ -26,7 +26,7 @@ void increasingList(int arr[], int count, int maxNumber) {
 }
 
 
-
+//从头至尾打印数组里的内容
 void printArray(int arr[], int len) {
 	printf("int Array[%d]={", len);
 	for (int i = 0; i < len; i++) {
@@ -36,5 +36,33 @@ void printArray(int arr[], int len) {
 		else {
 			printf("%d}\n", arr[i]);
 		}
+	}
+}
+
+
+
+//对数组里面的内容进行排序
+void quickSort(int arr[], int low, int high) {
+	int temp, i = low, j = high;
+	if (low < high) {
+		temp = arr[low];
+		while (i < j){
+			while (j > i && arr[j] > temp) {
+				j--;
+			}
+			if (i < j) {
+				arr[i++] = arr[j];
+			}
+
+			while (i < j && arr[i] < temp) {
+				i++;
+			}
+			if (i < j) {
+				arr[j--] = arr[i];
+			}
+		}
+		arr[i] = temp;
+		quickSort(arr, low, i - 1);
+		quickSort(arr, i + 1, high);
 	}
 }
