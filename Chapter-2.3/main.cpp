@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 8
+#define len 9
 #define limit 100
 static int arr[len];
 // = {11,21,2,14,20}
@@ -11,6 +11,7 @@ void test_232();
 void test_233();
 void test_234();
 void test_235();
+void test_236();
 
 int main() {
 	
@@ -23,7 +24,7 @@ int main() {
 	//test_233();
 	//test_234();
 	//test_235();
- 	
+	test_236();
 
 
 
@@ -94,5 +95,17 @@ void test_235() {
 	}
 	printLinkList(L);
 	InvertLink(L);
+	printLinkList(L);
+}
+
+
+//Ã‚2.3.6_ascendingOrder
+void test_236() {
+	LinkList L = createLinkListH();
+	for (int i = 0; i < len; i++) {
+		insertLNodeByTail(L, arr[i]);
+	}
+	printLinkList(L);
+	AscendingOrder(L);
 	printLinkList(L);
 }
