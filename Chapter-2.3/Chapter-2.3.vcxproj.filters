@@ -47,5 +47,8 @@
     <ClCompile Include="2.3.5_invertLinkList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="2.3.6_.ascendingLinkList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

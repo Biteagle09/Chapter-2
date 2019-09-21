@@ -30,3 +30,4 @@ extern void DeleteX_2(LinkList& L, int x);  //题2.3.2
 extern void ReverseOutput(LinkList L);  //题2.3.3
 extern void DeleteMin(LinkList& L);  //题2.3.4
 extern void InvertLink(LinkList& L);  //题2.3.5
+extern void AscendingOrder(LinkList L);  //题2.3.6

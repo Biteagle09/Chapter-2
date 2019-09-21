@@ -28,6 +28,7 @@
     <ClCompile Include="2.3.3_reverseOutput.cpp" />
     <ClCompile Include="2.3.4_deleteMin.cpp" />
     <ClCompile Include="2.3.5_invertLinkList.cpp" />
+    <ClCompile Include="2.3.6_.ascendingLinkList.cpp" />
     <ClCompile Include="ADT.cpp" />
     <ClCompile Include="com.cpp" />
     <ClCompile Include="main.cpp" />
