@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 9
+#define len 5
 #define limit 100
 static int arr[len];
 // = {11,21,2,14,20}
