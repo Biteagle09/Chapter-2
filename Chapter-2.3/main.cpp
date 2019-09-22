@@ -2,8 +2,8 @@
 #include "comm.h"
 #define len 9
 #define limit 100
-static int arr[len];
-// = {11,21,2,14,20}
+static int arr[len]= {1,2,3,6,4,5,45,6,4};
+// 
 
 //测试函数的声明
 //void test_231();
@@ -12,11 +12,12 @@ static int arr[len];
 //void test_234();
 //void test_235();
 //void test_236();
+void test_237();
 
 int main() {
 	
 
-	randMy(arr, len, limit); //生成随机测试数据
+	//randMy(arr, len, limit); //生成随机测试数据
  	printArray(arr,len);
  	//printf("*************************上面是数组，下面是链表*************************\n\n");
 	//test_231();
@@ -25,6 +26,7 @@ int main() {
 	//test_234();
 	//test_235();
 	//test_236();
+	test_237();
 
 
 
@@ -112,3 +114,13 @@ void test_236() {
 
 
 
+//题2.3.7_delete_S-E
+void test_237() {
+	LinkList L = createLinkListH();
+	for (int i = 0; i < len; i++) {
+		insertLNodeByTail(L, arr[i]);
+	}
+	printLinkList(L);
+	DeleteS_E(L,3,7);
+	printLinkList(L);
+}

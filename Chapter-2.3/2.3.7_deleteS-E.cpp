@@ -7,6 +7,20 @@
 	1буг║
 **********************************************************************************************/
 
-void DeleteS_E(LinkList L, int start, int end) {
-
+void DeleteS_E(LinkList& L, int start, int end) {
+	if (start > end) {
+		return;
+	}
+	LNode* pre = L;
+	LNode* p = pre->next;
+	while (p) {
+		if (start < p->data && p->data < end) {
+			pre->next = p->next;
+			free(p);
+			p = pre->next;
+		}else {
+			pre = p;
+			p = p->next;
+		}
+	}
 }
