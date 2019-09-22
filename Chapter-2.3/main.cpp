@@ -1,17 +1,17 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 5
+#define len 9
 #define limit 100
 static int arr[len];
 // = {11,21,2,14,20}
 
 //²âÊÔº¯ÊıµÄÉùÃ÷
-void test_231();
-void test_232();
-void test_233();
-void test_234();
-void test_235();
-void test_236();
+//void test_231();
+//void test_232();
+//void test_233();
+//void test_234();
+//void test_235();
+//void test_236();
 
 int main() {
 	
@@ -24,7 +24,7 @@ int main() {
 	//test_233();
 	//test_234();
 	//test_235();
-	test_236();
+	//test_236();
 
 
 
@@ -109,3 +109,6 @@ void test_236() {
 	AscendingOrder(L);
 	printLinkList(L);
 }
+
+
+
