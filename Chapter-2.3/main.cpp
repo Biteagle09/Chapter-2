@@ -17,7 +17,7 @@ static int arr[len];
 void test_239();
 
 
-void main() {
+int main() {
 	
 	randMy(arr, len, limit); //生成随机测试数据
  	printArray(arr,len);
@@ -33,7 +33,7 @@ void main() {
 	test_239();
 	
 
-
+	return 0;
 }
 
 //题2.3.1_deleteXOfRecursion
@@ -133,15 +133,15 @@ void test_237() {
 void test_238() {
 
 	LinkList L1 = createLinkListH();
-	for (int i = 11; i < 20; i++) {
-		insertLNodeByTail(L1, arr[i]);
-	}
+	//for (int i = 11; i < 20; i++) {
+	//	insertLNodeByTail(L1, arr[i]);
+	//}
 
 
 	LinkList L2 = createLinkListH();
-	for (int i = 11; i < 17; i++) {
-		insertLNodeByTail(L2, arr[i]);
-	}
+	//for (int i = 11; i < 17; i++) {
+	//	insertLNodeByTail(L2, arr[i]);
+	//}
 
 
 	LinkList L3 = createLinkListH();
@@ -189,4 +189,5 @@ void test_239() {
 	}
 	printLinkList(L);
 	IncrementPrintLink(L);
+	printLinkList(L);
 }

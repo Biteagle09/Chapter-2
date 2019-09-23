@@ -16,4 +16,40 @@
 void IncrementPrintLink(LinkList& L) {
 	LNode* pre = L;
 	LNode* p = pre->next;
+	int min = p->data;
+	while (p) {
+		if (p->next->data < min) {
+			
+		}
+	}
 }
+
+
+
+/*  先将单链表里的数据递增排序，排好序后在输出，最后删除这个链表
+void IncrementPrintLink(LinkList& L) {
+	LNode* p = L->next;
+	LNode* pre;
+	LNode* r = p->next;
+	p->next = NULL;
+	p = r;
+	while (p) {
+		r = p->next;
+		pre = L;
+		while (pre->next != NULL && pre->next->data < p->data) {
+			pre = pre->next;
+		}
+		p->next = pre->next;
+		pre->next = p;
+		p = r;
+	}
+	LNode* q = L->next;
+	
+	while (q->next){
+		printf_s("%d-->", q->data);
+		q = q->next;
+	}
+	printf_s("%d", q->data);
+	free(L);
+}
+*/
