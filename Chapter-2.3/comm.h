@@ -32,4 +32,5 @@ extern void DeleteMin(LinkList& L);  //题2.3.4
 extern void InvertLink(LinkList& L);  //题2.3.5
 extern void AscendingOrder(LinkList& L);  //题2.3.6
 extern void DeleteS_E(LinkList& L, int start, int end);  //题2.3.7
-extern LinkList FindPublicNode(LinkList L1, LinkList L2);  //题2.3.8
+extern LinkList FindPublicNode_1(LinkList L1, LinkList L2);  //题2.3.8
+extern LinkList FindPublicNode_2(LinkList L1, LinkList L2);  //题2.3.8

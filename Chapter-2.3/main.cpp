@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 5
-#define limit 100
+#define len 30
+#define limit 1000
 static int arr[len];
 // = {1,2,3,6,4,5,45,6,4}
 
@@ -12,27 +12,26 @@ static int arr[len];
 //void test_234();
 //void test_235();
 //void test_236();
-void test_237();
+//void test_237();
+void test_238();
 
-int main() {
+
+void main() {
 	
-
 	randMy(arr, len, limit); //生成随机测试数据
  	printArray(arr,len);
- 	//printf("*************************上面是数组，下面是链表*************************\n\n");
+ 	printf("*************************上面是数组，下面是链表*************************\n\n");
 	//test_231();
 	//test_232();
 	//test_233();
 	//test_234();
 	//test_235();
 	//test_236();
-	test_237();
+	//test_237();
+	test_238();
 	
 
 
-
-
-	
 }
 
 //题2.3.1_deleteXOfRecursion
@@ -122,8 +121,55 @@ void test_237() {
 		insertLNodeByTail(L, arr[i]);
 	}
 	printLinkList(L);
-	//DeleteS_E(L,3,7);
-	int lens = getLinkLength(L);
-	printf_s("The length of LinkList L==%d\n", lens);
-	//printLinkList(L);
+	DeleteS_E(L,3,7);
+	printLinkList(L);
+}
+
+
+
+//题2.3.8_FindPublicNode
+void test_238() {
+
+	LinkList L1 = createLinkListH();
+	for (int i = 1; i < 6; i++) {
+		insertLNodeByTail(L1, arr[i]);
+	}
+
+
+	LinkList L2 = createLinkListH();
+	for (int i = 1; i < 6; i++) {
+		insertLNodeByTail(L2, arr[i]);
+	}
+
+
+	LinkList L3 = createLinkListH();
+	for (int i = 1; i < 6; i++) {
+		insertLNodeByTail(L3, arr[i]);
+	}
+
+
+	LNode* p1 = L1;
+	while (p1->next) {
+		p1 = p1->next;
+	}
+	p1->next = L3->next;
+
+
+	LNode* p2 = L2;
+	while (p2->next) {
+		p2 = p2->next;
+	}
+	p2->next = L3->next;
+
+	printf_s("L1: ");
+	printLinkList(L1);
+	printf_s("\nL2: ");
+	printLinkList(L2);
+	printf_s("\nL3: ");
+	printLinkList(L3);
+
+
+	LinkList L = FindPublicNode_1(L1, L2);
+	printf_s("\nPublic Node [L]: ");
+	printLinkList(L);
 }
