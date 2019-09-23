@@ -131,19 +131,19 @@ void test_237() {
 void test_238() {
 
 	LinkList L1 = createLinkListH();
-	for (int i = 1; i < 6; i++) {
+	for (int i = 11; i < 20; i++) {
 		insertLNodeByTail(L1, arr[i]);
 	}
 
 
 	LinkList L2 = createLinkListH();
-	for (int i = 1; i < 6; i++) {
+	for (int i = 1; i < 7; i++) {
 		insertLNodeByTail(L2, arr[i]);
 	}
 
 
 	LinkList L3 = createLinkListH();
-	for (int i = 1; i < 6; i++) {
+	for (int i = 6; i < 10; i++) {
 		insertLNodeByTail(L3, arr[i]);
 	}
 
@@ -169,7 +169,10 @@ void test_238() {
 	printLinkList(L3);
 
 
-	LinkList L = FindPublicNode_1(L1, L2);
-	printf_s("\nPublic Node [L]: ");
-	printLinkList(L);
+	LinkList L_1 = FindPublicNode_1(L1, L2);
+	LinkList L_2 = FindPublicNode_2(L1, L2);
+	printf_s("\nPublic Node [L_1]: ");
+	printLinkList(L_1);
+	printf_s("\nPublic Node [L_2]: ");
+	printLinkList(L_2);
 }
