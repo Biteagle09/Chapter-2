@@ -137,13 +137,13 @@ void test_238() {
 
 
 	LinkList L2 = createLinkListH();
-	for (int i = 1; i < 7; i++) {
+	for (int i = 11; i < 17; i++) {
 		insertLNodeByTail(L2, arr[i]);
 	}
 
 
 	LinkList L3 = createLinkListH();
-	for (int i = 6; i < 10; i++) {
+	for (int i = 1; i < 7; i++) {
 		insertLNodeByTail(L3, arr[i]);
 	}
 
