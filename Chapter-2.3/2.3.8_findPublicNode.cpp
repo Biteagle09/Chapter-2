@@ -10,4 +10,5 @@
 
 LinkList FindPublicNode(LinkList L1, LinkList L2) {
 
+	return L1;
 }

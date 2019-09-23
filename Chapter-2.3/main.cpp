@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 9
+#define len 5
 #define limit 100
-static int arr[len]= {1,2,3,6,4,5,45,6,4};
-// 
+static int arr[len];
+// = {1,2,3,6,4,5,45,6,4}
 
 //测试函数的声明
 //void test_231();
@@ -17,7 +17,7 @@ void test_237();
 int main() {
 	
 
-	//randMy(arr, len, limit); //生成随机测试数据
+	randMy(arr, len, limit); //生成随机测试数据
  	printArray(arr,len);
  	//printf("*************************上面是数组，下面是链表*************************\n\n");
 	//test_231();
@@ -27,6 +27,7 @@ int main() {
 	//test_235();
 	//test_236();
 	test_237();
+	
 
 
 
@@ -121,6 +122,8 @@ void test_237() {
 		insertLNodeByTail(L, arr[i]);
 	}
 	printLinkList(L);
-	DeleteS_E(L,3,7);
-	printLinkList(L);
+	//DeleteS_E(L,3,7);
+	int lens = getLinkLength(L);
+	printf_s("The length of LinkList L==%d\n", lens);
+	//printLinkList(L);
 }

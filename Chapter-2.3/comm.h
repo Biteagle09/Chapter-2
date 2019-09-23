@@ -19,7 +19,7 @@ void printLinkList(LinkList L);
 void printDLinkList(DLinkList DL);
 void printDlinkListInvert(DLinkList DL);
 void quickSort(int arr[], int low, int high);
-
+int getLinkLength(LinkList L);
 
 
 

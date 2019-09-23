@@ -146,3 +146,16 @@ void printDlinkListInvert(DLinkList DL) {
 	}
 	printf("%d\n",p->data);
 }
+
+
+
+//5-1、求一个单链表的长度
+int getLinkLength(LinkList L) {
+	LNode* p = L->next;
+	int len = 0;
+	while (p) {
+		p = p->next;
+		len++;
+	}
+	return len;
+}
