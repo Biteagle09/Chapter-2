@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 30
-#define limit 1000
+#define len 9
+#define limit 100
 static int arr[len];
 // = {1,2,3,6,4,5,45,6,4}
 
@@ -13,7 +13,8 @@ static int arr[len];
 //void test_235();
 //void test_236();
 //void test_237();
-void test_238();
+//void test_238();
+void test_239();
 
 
 void main() {
@@ -28,7 +29,8 @@ void main() {
 	//test_235();
 	//test_236();
 	//test_237();
-	test_238();
+	//test_238();
+	test_239();
 	
 
 
@@ -175,4 +177,16 @@ void test_238() {
 	printLinkList(L_1);
 	printf_s("\nPublic Node [L_2]: ");
 	printLinkList(L_2);
+}
+
+
+
+//Ã‚2.3.9_increment output LinkList
+void test_239() {
+	LinkList L = createLinkListH();
+	for (int i = 0; i < len; i++) {
+		insertLNodeByTail(L, arr[i]);
+	}
+	printLinkList(L);
+	IncrementPrintLink(L);
 }

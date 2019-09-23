@@ -31,6 +31,7 @@
     <ClCompile Include="2.3.6_.ascendingLinkList.cpp" />
     <ClCompile Include="2.3.7_deleteS-E.cpp" />
     <ClCompile Include="2.3.8_findPublicNode.cpp" />
+    <ClCompile Include="2.3.9_incrementLinkList.cpp" />
     <ClCompile Include="ADT.cpp" />
     <ClCompile Include="com.cpp" />
     <ClCompile Include="main.cpp" />
