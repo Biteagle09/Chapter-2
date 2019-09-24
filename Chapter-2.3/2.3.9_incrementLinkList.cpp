@@ -19,7 +19,7 @@ void IncrementPrintLink(LinkList& L) {
 	int min = p->data;
 	while (p) {
 		if (p->next->data < min) {
-			
+			//½øĞĞÉ¾³ı²Ù×÷
 		}
 	}
 }
