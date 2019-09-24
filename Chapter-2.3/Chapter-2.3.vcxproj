@@ -23,6 +23,7 @@
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="2.3.10_splitLinkList.cpp" />
     <ClCompile Include="2.3.1_deleteX_recursion.cpp" />
     <ClCompile Include="2.3.2_deleteX.cpp" />
     <ClCompile Include="2.3.3_reverseOutput.cpp" />

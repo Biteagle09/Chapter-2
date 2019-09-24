@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 9
+#define len 5
 #define limit 100
 static int arr[len];
 // = {1,2,3,6,4,5,45,6,4}
@@ -183,11 +183,18 @@ void test_238() {
 
 //题2.3.9_increment output LinkList
 void test_239() {
-	LinkList L = createLinkListH();
+	LinkList L1 = createLinkListH();
+	LinkList L2 = createLinkListH();
 	for (int i = 0; i < len; i++) {
-		insertLNodeByTail(L, arr[i]);
+		insertLNodeByTail(L1, arr[i]);
+		insertLNodeByTail(L2, arr[i]);
 	}
-	printLinkList(L);
-	IncrementPrintLink(L);
-	printLinkList(L);
+	printLinkList(L1);
+	IncrementPrintLink_1(L1);
+	printf_s("Last :\n");
+	printf("*************************上面是方法1，下面是方法2*************************\n");
+	printLinkList(L2);
+	IncrementPrintLink_2(L2);
+	printf_s("Last :\n");
+	//printLinkList(L);
 }
