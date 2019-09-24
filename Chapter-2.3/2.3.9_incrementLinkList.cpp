@@ -20,6 +20,8 @@ void IncrementPrintLink(LinkList& L) {
 	while (p) {
 		if (p->next->data < min) {
 			//进行删除操作
+
+			//释放当前节点
 		}
 	}
 }
