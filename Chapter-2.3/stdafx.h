@@ -15,13 +15,13 @@
 #include <ctime>
 #include <cmath>
 
-
+#include <string>
 /*
 注意这里的string与cstring中的使用差别，
 在定义与使用cout输出string类型字符串的时候，最好使用string库，
 否则可能会出现乱码以及错误等一系列错误
 */
-#include <string>    
+
 
 
 

@@ -116,11 +116,16 @@ void insertDNodeByTail(DLinkList& DL, int data) {
 //4-1、从头至尾打印单链表
 void printLinkList(LinkList L) {
 	LNode* p = L->next;
-	while (p->next) {
-		printf("%d-->", p->data);
-		p = p->next;
+	if (p) {
+		while (p->next) {
+			printf("%d-->", p->data);
+			p = p->next;
+		}
+		printf("%d\n", p->data);
+	}else {
+		printf("NULL\n");
 	}
-	printf("%d\n", p->data);
+	
 }
 
 

@@ -14,14 +14,15 @@ static int arr[len];
 //void test_236();
 //void test_237();
 //void test_238();
-void test_239();
+//void test_239();
+void test_2310();
 
 
 int main() {
 	
 	randMy(arr, len, limit); //生成随机测试数据
  	printArray(arr,len);
- 	printf("*************************上面是数组，下面是链表*************************\n\n");
+ 	printf("^#*************************上面是数组，下面是链表*************************^#\n\n");
 	//test_231();
 	//test_232();
 	//test_233();
@@ -30,7 +31,8 @@ int main() {
 	//test_236();
 	//test_237();
 	//test_238();
-	test_239();
+	//test_239();
+	test_2310();
 	
 
 	return 0;
@@ -197,4 +199,33 @@ void test_239() {
 	IncrementPrintLink_2(L2);
 	printf_s("Last :\n");
 	//printLinkList(L);
+}
+
+
+
+
+//题2.3.10_split LinkList
+void test_2310() {
+	LinkList La1 = createLinkListH();
+	LinkList Lb1 = createLinkListH();
+	LinkList La2 = createLinkListH();
+	LinkList Lb2 = createLinkListH();
+
+	for (int i = 0; i < len; i++) {
+		insertLNodeByTail(La1, arr[i]);
+		insertLNodeByTail(La2, arr[i]);
+	}
+	//printLinkList(La1);
+	//printf_s("***************************上面是原来的链表,下面是分割后的链表************\n\n");
+	SplitLink_1(La1, Lb1);
+	printf_s("LA: ");
+	printLinkList(La1);
+	printf_s("LB: ");
+	printLinkList(Lb1);
+	printf_s("***************************上面是方法(一),下面是方法(二)************\n");
+	SplitLink_2(La2, Lb2);
+	printf_s("LA: ");
+	printLinkList(La2);
+	printf_s("LB: ");
+	printLinkList(Lb2);
 }

@@ -37,3 +37,4 @@ extern LinkList FindPublicNode_2(LinkList L1, LinkList L2);  //题2.3.8
 extern void IncrementPrintLink_1(LinkList& L);  //题2.3.9
 extern void IncrementPrintLink_2(LinkList& L);  //题2.3.9
 extern void SplitLink_1(LinkList& A, LinkList& B);  //题2.3.10
+extern void SplitLink_2(LinkList& A, LinkList& B);  //题2.3.10
