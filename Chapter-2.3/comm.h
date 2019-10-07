@@ -38,3 +38,5 @@ extern void IncrementPrintLink_1(LinkList& L);  //题2.3.9
 extern void IncrementPrintLink_2(LinkList& L);  //题2.3.9
 extern void SplitLink_1(LinkList& A, LinkList& B);  //题2.3.10
 extern void SplitLink_2(LinkList& A, LinkList& B);  //题2.3.10
+extern LinkList splitIntoAB(LinkList& A);          //题 2.3.11
+extern void deleteRepetitionElem(LinkList& L);    //题 2.3.12

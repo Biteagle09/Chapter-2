@@ -62,5 +62,11 @@
     <ClCompile Include="2.3.10_splitLinkList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="2.3.11_splitTheListIntoAB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="2.3.12_deleteRepetitionElemInLinkList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

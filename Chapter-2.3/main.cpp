@@ -4,6 +4,7 @@
 #define limit 100
 static int arr[len];
 // = {1,2,3,6,4,5,45,6,4}
+// = {7,10,10,21,30,42,42,42,51,70}
 
 //测试函数的声明
 //void test_231();
@@ -15,7 +16,9 @@ static int arr[len];
 //void test_237();
 //void test_238();
 //void test_239();
-void test_2310();
+//void test_2310();
+void test_2311();
+void test_2312();
 
 
 int main() {
@@ -32,7 +35,9 @@ int main() {
 	//test_237();
 	//test_238();
 	//test_239();
-	test_2310();
+	//test_2310();
+	test_2311();
+	//test_2312();
 	
 
 	return 0;
@@ -228,4 +233,31 @@ void test_2310() {
 	printLinkList(La2);
 	printf_s("LB: ");
 	printLinkList(Lb2);
+}
+
+
+
+//题2.3.11   split the LInkList into A and B
+void test_2311() {
+	LinkList A = createLinkListH();
+	for (int i = 0; i < len; i++) {
+		insertLNodeByTail(A, arr[i]);
+	}
+	printLinkList(A);
+	LinkList B = splitIntoAB(A);
+	printf("LinkList[A]:");
+	printLinkList(A);
+	printf("LinkList[B]:");
+	printLinkList(B);
+}
+
+
+
+
+//题2.3.12 delete repetition element in LinkList
+void test_2312() {
+	LinkList L = createLinkListH();
+	printLinkList(L);
+	deleteRepetitionElem(L);
+	printLinkList(L);
 }
