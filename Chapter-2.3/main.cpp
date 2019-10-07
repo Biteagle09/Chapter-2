@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 6
+#define len 9
 #define limit 100
 static int arr[len];
 // = {1,2,3,6,4,5,45,6,4}
@@ -239,16 +239,26 @@ void test_2310() {
 
 //题2.3.11   split the LInkList into A and B
 void test_2311() {
-	LinkList A = createLinkListH();
+	LinkList A1 = createLinkListH();
+	LinkList A2 = createLinkListH();
 	for (int i = 0; i < len; i++) {
-		insertLNodeByTail(A, arr[i]);
+		insertLNodeByTail(A1, arr[i]);
+		insertLNodeByTail(A2, arr[i]);
 	}
-	printLinkList(A);
-	LinkList B = splitIntoAB_2(A);
-	printf("LinkList[A]:");
-	printLinkList(A);
-	printf("LinkList[B]:");
-	printLinkList(B);
+	printf("初始链表: ");
+	printLinkList(A1);
+
+	LinkList B1 = splitIntoAB_1(A1);
+	printf("\n方法1:\n   LinkList[A1]:");
+	printLinkList(A1);
+	printf("   LinkList[B1]:");
+	printLinkList(B1);
+
+	LinkList B2 = splitIntoAB_2(A2);
+	printf("方法2:\n   LinkList[A2]:");
+	printLinkList(A2);
+	printf("   LinkList[B2]:");
+	printLinkList(B2);
 }
 
 
