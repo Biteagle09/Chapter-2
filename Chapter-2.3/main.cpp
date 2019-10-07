@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 5
+#define len 6
 #define limit 100
 static int arr[len];
 // = {1,2,3,6,4,5,45,6,4}
@@ -244,7 +244,7 @@ void test_2311() {
 		insertLNodeByTail(A, arr[i]);
 	}
 	printLinkList(A);
-	LinkList B = splitIntoAB(A);
+	LinkList B = splitIntoAB_2(A);
 	printf("LinkList[A]:");
 	printLinkList(A);
 	printf("LinkList[B]:");
