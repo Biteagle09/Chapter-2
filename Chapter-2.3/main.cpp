@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 9
+#define len 7
 #define limit 100
 static int arr[len];
 // = {1,2,3,6,4,5,45,6,4}
@@ -17,15 +17,15 @@ static int arr[len];
 //void test_238();
 //void test_239();
 //void test_2310();
-void test_2311();
+//void test_2311();
 void test_2312();
 
 
 int main() {
 	
-	randMy(arr, len, limit); //生成随机测试数据
- 	printArray(arr,len);
- 	printf("^#*************************上面是数组，下面是链表*************************^#\n\n");
+	//randMy(arr, len, limit); //生成随机测试数据
+ 	//printArray(arr,len);
+ 	printf("^#*************************上面是数组,下面是链表*************************^#\n\n");
 	//test_231();
 	//test_232();
 	//test_233();
@@ -36,8 +36,8 @@ int main() {
 	//test_238();
 	//test_239();
 	//test_2310();
-	test_2311();
-	//test_2312();
+	//test_2311();
+	test_2312();
 	
 
 	return 0;
@@ -66,7 +66,7 @@ void test_232() {
 	}
 	DeleteX_1(L1, 6);
 	printLinkList(L1);
- 	printf("*************************上面是方法1，下面是方法2*************************\n");
+ 	printf("*************************上面是方法1,下面是方法2*************************\n");
  	DeleteX_2(L2, 6);
  	printLinkList(L2);
 }
@@ -199,7 +199,7 @@ void test_239() {
 	printLinkList(L1);
 	IncrementPrintLink_1(L1);
 	printf_s("Last :\n");
-	printf("*************************上面是方法1，下面是方法2*************************\n");
+	printf("*************************上面是方法1,下面是方法2*************************\n");
 	printLinkList(L2);
 	IncrementPrintLink_2(L2);
 	printf_s("Last :\n");
@@ -267,7 +267,16 @@ void test_2311() {
 //题2.3.12 delete repetition element in LinkList
 void test_2312() {
 	LinkList L = createLinkListH();
+	// 7,10,10,21,30,42,42,42,51,70
+	int arr1[] = { 7,10,10,21,30,42,42,42,51,70 };
+	int lens = sizeof(arr1) / sizeof(arr1[0]);
+	for (int i = 0; i < lens; i++) {
+		insertLNodeByTail(L, arr1[i]);
+	}
+
+	printf("初始链表: \n   ");
 	printLinkList(L);
 	deleteRepetitionElem(L);
+	printf("去重后的链表: \n   ");
 	printLinkList(L);
 }

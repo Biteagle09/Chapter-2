@@ -10,5 +10,19 @@
 	3°：若p和pre的data域不同时，则将pre和p同时向后移动，直到链表的最后，表中自然就剩下了所有的非重复元素。
 **********************************************************************************************/
 void deleteRepetitionElem(LinkList &L) {
-
+	if (!(L && L->next && L->next->next) ) {
+		printf("链表中只有一个元素或链表为空!!!\n");
+		return;
+	}
+	LNode* pre = L, *p = L->next;
+	while (p) {
+		if (pre->data == p->data) {                          //若遇到重复元素，则删除后面的重复元素
+			pre->next = p->next;
+			//pre = p;
+			p = p->next;
+		}else {												 //不是重复元素，则p和pre同时向后遍历
+			pre = p;
+			p = p->next;
+		}
+	}
 }
