@@ -18,13 +18,25 @@ static int arr[len];
 //void test_239();
 //void test_2310();
 //void test_2311();
-void test_2312();
+//void test_2312();
+void test_2313();
+//void test_2314();
+//void test_2315();
+//void test_2316();
+//void test_2317();
+//void test_2318();
+//void test_2319();
+//void test_2320();
+//void test_2321();
+//void test_2322();
+//void test_2323();
+
 
 
 int main() {
 	
-	//randMy(arr, len, limit); //生成随机测试数据
- 	//printArray(arr,len);
+	randMy(arr, len, limit); //生成随机测试数据
+ 	printArray(arr,len);
  	printf("^#*************************上面是数组,下面是链表*************************^#\n\n");
 	//test_231();
 	//test_232();
@@ -37,7 +49,8 @@ int main() {
 	//test_239();
 	//test_2310();
 	//test_2311();
-	test_2312();
+	//test_2312();
+	test_2313();
 	
 
 	return 0;
@@ -279,4 +292,89 @@ void test_2312() {
 	deleteRepetitionElem(L);
 	printf("去重后的链表: \n   ");
 	printLinkList(L);
+}
+
+
+
+
+/*题2.3.13 */
+void test_2313() {
+	
+}
+
+
+
+
+/*题2.3.14 */
+void test_2314() {
+	
+}
+
+
+
+
+
+/*题2.3.15 */
+void test_2315() {
+	
+}
+
+
+
+/*题2.3.16 */
+void test_2316() {
+
+}
+
+
+
+
+/*题2.3.17 */
+void test_2317() {
+
+}
+
+
+
+/*题2.3.18 */
+void test_2318() {
+
+}
+
+
+
+/*题2.3.19 */
+void test_2319() {
+
+}
+
+
+
+/*题2.3.20 */
+void test_2320() {
+
+}
+
+
+
+
+/*题2.3.21 */
+void test_2321() {
+
+}
+
+
+
+
+/*题2.3.22 */
+void test_2322() {
+
+}
+
+
+
+
+/*题2.3.23 */
+void test_2323() {
+
 }

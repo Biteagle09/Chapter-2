@@ -68,5 +68,14 @@
     <ClCompile Include="2.3.12_deleteRepetitionElemInLinkList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="2.3.13_orderlyMergeAB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="2.3.14_creatCLinkInABOfPublic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="2.3.15_intersectionOfAB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
