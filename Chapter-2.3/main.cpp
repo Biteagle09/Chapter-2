@@ -35,8 +35,8 @@ void test_2313();
 
 int main() {
 	
-	randMy(arr, len, limit); //生成随机测试数据
- 	printArray(arr,len);
+	//randMy(arr, len, limit); //生成随机测试数据
+ 	//printArray(arr,len);
  	printf("^#*************************上面是数组,下面是链表*************************^#\n\n");
 	//test_231();
 	//test_232();
@@ -299,7 +299,27 @@ void test_2312() {
 
 /*题2.3.13 */
 void test_2313() {
-	
+	LinkList A = createLinkListH();
+	LinkList B = createLinkListH();
+	int arrA[] = { 2,3,4,5,9,11 };;
+	int arrB[] = { 4,7,12,13 };
+	int lenA = sizeof(arrA) / sizeof(arrA[0]);
+	int lenB = sizeof(arrB) / sizeof(arrB[0]);
+	for (int i = 0; i < lenA; i++) {
+		insertLNodeByTail(A, arrA[i]);
+	}
+	for (int i = 0; i < lenB; i++) {
+		insertLNodeByTail(B, arrB[i]);
+	}
+	printf("LinkList[A]: ");
+	printLinkList(A);
+	printf("LinkList[B]: ");
+	printLinkList(B);
+
+	mergeABToAB(A, B);
+	printf("Merge[A-B] : ");
+	printLinkList(A);
+
 }
 
 
