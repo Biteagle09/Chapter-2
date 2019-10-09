@@ -19,8 +19,8 @@ static int arr[len];
 //void test_2310();
 //void test_2311();
 //void test_2312();
-void test_2313();
-//void test_2314();
+//void test_2313();
+void test_2314();
 //void test_2315();
 //void test_2316();
 //void test_2317();
@@ -35,8 +35,8 @@ void test_2313();
 
 int main() {
 	
-	//randMy(arr, len, limit); //生成随机测试数据
- 	//printArray(arr,len);
+	randMy(arr, len, limit); //生成随机测试数据
+ 	printArray(arr,len);
  	printf("^#*************************上面是数组,下面是链表*************************^#\n\n");
 	//test_231();
 	//test_232();
@@ -50,7 +50,8 @@ int main() {
 	//test_2310();
 	//test_2311();
 	//test_2312();
-	test_2313();
+	//test_2313();
+	test_2314();
 	
 
 	return 0;
@@ -327,7 +328,26 @@ void test_2313() {
 
 /*题2.3.14 */
 void test_2314() {
-	
+	LinkList A = createLinkListH();
+	LinkList B = createLinkListH();
+	int arrA[] = { 2,3,4,5,6,9,11,12,13,14 };;
+	int arrB[] = { 2,4,6,7,12,13,17};
+	int lenA = sizeof(arrA) / sizeof(arrA[0]);
+	int lenB = sizeof(arrB) / sizeof(arrB[0]);
+	for (int i = 0; i < lenA; i++) {
+		insertLNodeByTail(A, arrA[i]);
+	}
+	for (int i = 0; i < lenB; i++) {
+		insertLNodeByTail(B, arrB[i]);
+	}
+	printf("LinkList[A]: ");
+	printLinkList(A);
+	printf("LinkList[B]: ");
+	printLinkList(B);
+
+	LinkList C = getPublicOfAB(A, B);
+	printf("getPublicOfAB[C] : ");
+	printLinkList(C);
 }
 
 

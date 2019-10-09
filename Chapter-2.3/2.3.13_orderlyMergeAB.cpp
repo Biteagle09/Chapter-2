@@ -17,7 +17,7 @@ void mergeABToAB(LinkList &A, LinkList &B) {
 	LNode *q;
 	while (pa && pb) {
 		if (pa->data < pb->data) {                   //若pa的值小于pb的值，则将pa头插到C链表中，同时将pa向后移动一个位置，pb保持不动
-			q = pa->next;
+			q = pa->next;							//关键操作，必须要用临时指针q来保存当前遍历指针的后继节点，保证不断链
 			pa->next = A->next;
 			A->next = pa;
 			pa = q;
