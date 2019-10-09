@@ -44,3 +44,8 @@ extern void deleteRepetitionElem(LinkList& L);    //题 2.3.12
 extern void mergeABToAB(LinkList& A, LinkList& B);  //题 2.3.13
 extern LinkList getPublicOfAB(LinkList A, LinkList B);  //题 2.3.14
 extern LinkList getIntersectionOfAB(LinkList& A, LinkList& B);  //题2.3.15
+extern bool isSubsequence(LinkList A, LinkList B);  //题 2.3.16
+extern bool isSymmetryDLink(DLinkList DL);          //题 2.3.17
+extern void jointAB(LinkList& A, LinkList& B);  //题 2.3.18
+extern void asecdingOutPut(LinkList& L);  //题 2.3.19
+extern DLinkList sortByLocate(DLinkList& DL);  //题 2.3.20

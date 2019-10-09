@@ -330,7 +330,7 @@ void test_2313() {
 void test_2314() {
 	LinkList A = createLinkListH();
 	LinkList B = createLinkListH();
-	int arrA[] = { 2,3,4,5,6,9,11,12,13,14 };;
+	int arrA[] = { 1,2,3,4,5,6,9,11,12,13,14 };;
 	int arrB[] = { 2,4,6,7,12,13,17};
 	int lenA = sizeof(arrA) / sizeof(arrA[0]);
 	int lenB = sizeof(arrB) / sizeof(arrB[0]);
@@ -363,7 +363,10 @@ void test_2315() {
 
 /*题2.3.16 */
 void test_2316() {
+	LinkList A = createLinkListH();
+	LinkList B = createLinkListH();
 
+	bool flag = isSubsequence(A,B);
 }
 
 
@@ -371,28 +374,37 @@ void test_2316() {
 
 /*题2.3.17 */
 void test_2317() {
-
+	DLinkList DL = createDLinkListH();
+	
+	isSymmetryDLink(DL);
 }
 
 
 
 /*题2.3.18 */
 void test_2318() {
+	LinkList A = createLinkListH();
+	LinkList B = createLinkListH();
 
+	jointAB(A, B);
 }
 
 
 
 /*题2.3.19 */
 void test_2319() {
+	LinkList L = createLinkListH();
 
+	asecdingOutPut(L);
 }
 
 
 
 /*题2.3.20 */
 void test_2320() {
+	DLinkList DL = createDLinkListH();
 
+	sortByLocate(DL);
 }
 
 

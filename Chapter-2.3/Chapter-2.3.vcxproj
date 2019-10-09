@@ -29,7 +29,12 @@
     <ClCompile Include="2.3.13_orderlyMergeAB.cpp" />
     <ClCompile Include="2.3.14_creatCLinkInABOfPublic.cpp" />
     <ClCompile Include="2.3.15_intersectionOfAB.cpp" />
+    <ClCompile Include="2.3.16_isSubsequence.cpp" />
+    <ClCompile Include="2.3.17_isSymmetryOfDLinkList.cpp" />
+    <ClCompile Include="2.3.18_jointAB.cpp" />
+    <ClCompile Include="2.3.19_asecdingOutPut.cpp" />
     <ClCompile Include="2.3.1_deleteX_recursion.cpp" />
+    <ClCompile Include="2.3.20_sortOfLocateInDLink.cpp" />
     <ClCompile Include="2.3.2_deleteX.cpp" />
     <ClCompile Include="2.3.3_reverseOutput.cpp" />
     <ClCompile Include="2.3.4_deleteMin.cpp" />
