@@ -21,8 +21,8 @@ static int arr[len];
 //void test_2312();
 //void test_2313();
 //void test_2314();
-void test_2315();
-//void test_2316();
+//void test_2315();
+void test_2316();
 //void test_2317();
 //void test_2318();
 //void test_2319();
@@ -52,7 +52,8 @@ int main() {
 	//test_2312();
 	//test_2313();
 	//test_2314();
-	test_2315();
+	//test_2315();
+	test_2316();
 	
 
 	return 0;
@@ -382,12 +383,32 @@ void test_2315() {
 
 
 
-/*题2.3.16 */
+/*题2.3.16 判断序列B是否是序列A的连续子序列*/
 void test_2316() {
 	LinkList A = createLinkListH();
 	LinkList B = createLinkListH();
+	int arrA[] = { 1,2,3,4,5,6,9,11,12,13,14,16,17,19,28 };
+	int arrB[] = { 6,9,11,12,13 };
+	int lenA = sizeof(arrA) / sizeof(arrA[0]);
+	int lenB = sizeof(arrB) / sizeof(arrB[0]);
+	for (int i = 0; i < lenA; i++) {
+		insertLNodeByTail(A, arrA[i]);
+	}
+	for (int i = 0; i < lenB; i++) {
+		insertLNodeByTail(B, arrB[i]);
+	}
+	printf("LinkList[A]: ");
+	printLinkList(A);
+	printf("LinkList[B]: ");
+	printLinkList(B);
 
-	bool flag = isSubsequence(A,B);
+
+	if (isSubsequence(A, B)) {
+		printf("B is a subsequence of A!!!\n");
+	}else {
+		printf("B is not a subsequence of A!!!\n");
+	};
+	
 }
 
 
