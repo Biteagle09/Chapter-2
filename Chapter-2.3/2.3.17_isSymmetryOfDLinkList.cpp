@@ -6,7 +6,16 @@
 2¡¢Ëã·¨Ë¼Ïë£º
 	1¡ã£º
 **********************************************************************************************/
-bool isSymmetryDLink(DLinkList DL) {
-
+bool isSymmetryDLink(CDLinkList CDL) {
+	CDNode *pri = CDL->prior;
+	CDNode *p = CDL->next;
+	while (pri != p || p->next != pri) {
+		if (pri->data == p->data) {
+			pri = pri->prior;
+			p = p->next;
+		} else {
+			return false;
+		}
+	}
 	return true;
 }

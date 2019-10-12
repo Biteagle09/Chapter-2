@@ -22,8 +22,8 @@ static int arr[len];
 //void test_2313();
 //void test_2314();
 //void test_2315();
-void test_2316();
-//void test_2317();
+//void test_2316();
+void test_2317();
 //void test_2318();
 //void test_2319();
 //void test_2320();
@@ -53,7 +53,8 @@ int main() {
 	//test_2313();
 	//test_2314();
 	//test_2315();
-	test_2316();
+	//test_2316();
+	test_2317();
 	
 
 	return 0;
@@ -416,9 +417,17 @@ void test_2316() {
 
 /*Ã‚2.3.17 */
 void test_2317() {
-	DLinkList DL = createDLinkListH();
-	
-	isSymmetryDLink(DL);
+	CDLinkList CDL;
+	int arrA[] = { 1,2,3,3,2,1 };
+	int lenA = sizeof(arrA) / sizeof(arrA[0]);
+	for (int i = 0; i < lenA; i++) {
+		//insertCDNodeByTail(CDL, arrA[i]);
+	}
+	if (isSymmetryDLink(CDL)) {
+		printf("CDL is a symmetry CDLinkList!!!\n");
+	}else {
+		printf("CDL is not a symmetry CDLinkList!!!\n");
+	}
 }
 
 

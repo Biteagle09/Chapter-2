@@ -25,6 +25,7 @@ DNode* createDNode(int data) {
 
 
 
+
 //2-1、创建一个带头结点的单向链式表*/
 LinkList createLinkListH() {
 	LinkList headNode = (LinkList)malloc(sizeof(LinkList));
@@ -54,6 +55,8 @@ DLinkList createDLinkListH() {
 	}
 	return headNode;
 };
+
+
 
 //2-4、创建一个不带头结点的双向链表
 DLinkList* createDLinkList() {
@@ -109,6 +112,7 @@ void insertDNodeByTail(DLinkList& DL, int data) {
 	tailNode->next = newNode;
 	newNode->prior = tailNode;
 }
+
 
 
 

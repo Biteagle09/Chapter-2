@@ -39,6 +39,16 @@ typedef struct LNode {
 	struct LNode *next;;
 }LNode, *LinkList;
 
+//循环单链表
+typedef struct CLNode {
+	int data;
+	struct CLNode* next;;
+}CLNode, *CLinkList;
+
+
+
+
+
 
 
 //双链表
@@ -48,6 +58,12 @@ typedef struct DNode {
 	struct DNode* next;  //后继指针
 }DNode, *DLinkList;
 
+//循环双链表
+typedef struct CDNode {
+	int data;  //数据域
+	struct CDNode* prior; //前驱指针
+	struct CDNode* next;  //后继指针
+}CDNode, *CDLinkList;
 
 
 //静态链表
