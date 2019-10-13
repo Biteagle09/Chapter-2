@@ -133,6 +133,27 @@ void printLinkList(LinkList L) {
 }
 
 
+//4-1-1、从头至尾打印循环单链表
+void printCycleLinkList(LinkList L) {
+	LNode* p = L->next;
+	if (p) {
+		while (p->next != L) {
+			printf("%d-->", p->data);
+			p = p->next;
+		}
+		printf("%d\n", p->data);
+	}
+	else {
+		printf("NULL\n");
+	}
+}
+
+
+
+
+
+
+
 //4-2、从头至尾打印双链表
 void printDLinkList(DLinkList DL) {
 	DNode* p = DL->next;

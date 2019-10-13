@@ -23,8 +23,8 @@ static int arr[len];
 //void test_2314();
 //void test_2315();
 //void test_2316();
-void test_2317();
-//void test_2318();
+//void test_2317();
+void test_2318();
 //void test_2319();
 //void test_2320();
 //void test_2321();
@@ -54,7 +54,8 @@ int main() {
 	//test_2314();
 	//test_2315();
 	//test_2316();
-	test_2317();
+	//test_2317();
+	test_2318();
 	
 
 	return 0;
@@ -460,8 +461,33 @@ void test_2317() {
 void test_2318() {
 	LinkList A = createLinkListH();
 	LinkList B = createLinkListH();
+	int arrA[] = { 23,45,1 };
+	int arrB[] = { 3,2,6,9,11 };
+	int lenA = sizeof(arrA) / sizeof(arrA[0]);
+	int lenB = sizeof(arrB) / sizeof(arrB[0]);
+	LNode *pa = A,  *pb = B;
+	for (int i = 0; i < lenA; i++) {
+		insertLNodeByTail(A, arrA[i]);
+		pa = pa->next;
+	}
+	
+	for (int i = 0; i < lenB; i++) {
+		insertLNodeByTail(B, arrB[i]);
+		pb = pb->next;
+	}
+	pa->next = A;        //让A 链表和B链表循环起来
+	pb->next = B;
+	
+
+	printf("LinkList[A]: ");
+	printCycleLinkList(A);
+	printf("LinkList[B]: ");
+	printCycleLinkList(B);
 
 	jointAB(A, B);
+	//打印出循环拼接后的链表
+	printf("LinkList[A-->B]: ");
+	printCycleLinkList(A);
 }
 
 
