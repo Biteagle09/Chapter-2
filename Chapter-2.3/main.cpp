@@ -417,12 +417,36 @@ void test_2316() {
 
 /*题2.3.17 */
 void test_2317() {
-	CDLinkList CDL;
-	int arrA[] = { 1,2,3,3,2,1 };
+	CDLinkList CDL = (CDLinkList)malloc(sizeof(CDNode));
+	if (CDL) {
+		CDL->next = NULL; CDL->prior = NULL;
+	}
+	CDNode* tail = CDL, *u;
+
+	int arrA[] = { 1,2,3 };
 	int lenA = sizeof(arrA) / sizeof(arrA[0]);
 	for (int i = 0; i < lenA; i++) {
-		//insertCDNodeByTail(CDL, arrA[i]);
+		CDNode* newCDNode = (CDNode*)malloc(sizeof(CDNode));
+		newCDNode->data = arrA[i];
+		newCDNode->next = CDL;
+		newCDNode->prior = tail;
+		tail->next = newCDNode;
+		CDL->prior = newCDNode;
+		tail = newCDNode;
 	}
+
+	//打印下CDL链表里的内容
+	printArray(arrA, lenA);
+	CDNode *p = CDL->next;
+	printf("CDLinkList[%d]: ", lenA);
+	while (p->next != CDL) {
+		printf("%d-->", p->data);
+		p = p->next;
+	}
+	printf("%d\n",p->data);
+
+
+
 	if (isSymmetryDLink(CDL)) {
 		printf("CDL is a symmetry CDLinkList!!!\n");
 	}else {

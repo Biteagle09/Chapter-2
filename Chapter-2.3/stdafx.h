@@ -31,7 +31,7 @@
 
 
 
-//线性表链式结构体的定义
+//线性表链式存储结构体的定义
 
 //单链表
 typedef struct LNode {
@@ -64,6 +64,8 @@ typedef struct CDNode {
 	struct CDNode* prior; //前驱指针
 	struct CDNode* next;  //后继指针
 }CDNode, *CDLinkList;
+
+
 
 
 //静态链表
