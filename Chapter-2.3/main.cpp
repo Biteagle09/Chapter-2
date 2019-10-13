@@ -24,8 +24,8 @@ static int arr[len];
 //void test_2315();
 //void test_2316();
 //void test_2317();
-void test_2318();
-//void test_2319();
+//void test_2318();
+void test_2319();
 //void test_2320();
 //void test_2321();
 //void test_2322();
@@ -35,8 +35,8 @@ void test_2318();
 
 int main() {
 	
-	//randMy(arr, len, limit); //生成随机测试数据
- 	//printArray(arr,len);
+	randMy(arr, len, limit); //生成随机测试数据
+ 	printArray(arr,len);
  	printf("^#*************************上面是数组,下面是链表*************************^#\n\n");
 	//test_231();
 	//test_232();
@@ -55,7 +55,8 @@ int main() {
 	//test_2315();
 	//test_2316();
 	//test_2317();
-	test_2318();
+	//test_2318();
+	test_2319();
 	
 
 	return 0;
@@ -495,7 +496,15 @@ void test_2318() {
 /*题2.3.19 */
 void test_2319() {
 	LinkList L = createLinkListH();
-
+	LNode *tail = L;
+	for (int i = 0; i < len; i++) {
+		insertLNodeByTail(L, arr[i]);
+		tail = tail->next;
+	}
+	tail->next = L;
+	printf("LinkList[L]: ");
+	printCycleLinkList(L);
+	printf("LinkList[L']: ");
 	asecdingOutPut(L);
 }
 
