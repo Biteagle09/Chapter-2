@@ -423,7 +423,7 @@ void test_2317() {
 	}
 	CDNode* tail = CDL, *u;
 
-	int arrA[] = { 1,2,3 };
+	int arrA[] = { 9,9,5,9,5,9,9 };
 	int lenA = sizeof(arrA) / sizeof(arrA[0]);
 	for (int i = 0; i < lenA; i++) {
 		CDNode* newCDNode = (CDNode*)malloc(sizeof(CDNode));

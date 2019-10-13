@@ -7,11 +7,9 @@
 	1буг║
 **********************************************************************************************/
 bool isSymmetryDLink(CDLinkList CDL) {
-	CDNode *pri = CDL;
-	CDNode *p = CDL;
+	CDNode *pri = CDL->prior;
+	CDNode *p = CDL->next;
 	while (pri != p && pri->next != p) {
-		pri = pri->prior;
-		p = p->next;
 		if (pri->data == p->data) {
 			pri = pri->prior;
 			p = p->next;
