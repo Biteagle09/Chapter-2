@@ -540,12 +540,7 @@ void test_2320() {
 	}
 	printf("%d[%d]\n",p->data,p->freq);
 
-	DNode1 *d1 = LocateElem(DL, 12);
-
-
-
-
-	//sortByLocate(DL);
+	//Locate(DL,12);
 }
 
 
