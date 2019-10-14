@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "comm.h"
-#define len 7
+#define len 5
 #define limit 100
 static int arr[len];
 // = {1,2,3,6,4,5,45,6,4}
@@ -25,8 +25,8 @@ static int arr[len];
 //void test_2316();
 //void test_2317();
 //void test_2318();
-void test_2319();
-//void test_2320();
+//void test_2319();
+void test_2320();
 //void test_2321();
 //void test_2322();
 //void test_2323();
@@ -56,7 +56,8 @@ int main() {
 	//test_2316();
 	//test_2317();
 	//test_2318();
-	test_2319();
+	//test_2319();
+	test_2320();
 	
 
 	return 0;
@@ -512,9 +513,39 @@ void test_2319() {
 
 /*题2.3.20 */
 void test_2320() {
-	DLinkList DL = createDLinkListH();
+	DLinkList1 DL = (DLinkList1)malloc(sizeof(DNode1));
+	if (DL) {
+		DL->freq = 0;
+		DL->next = NULL;
+		DL->prior = NULL;
+	}
+	DNode1 *pre = DL, *p = DL;
+	for (int i = 0; i < len; i++ ) {
+		DNode1 *newNode = (DNode1*)malloc(sizeof(DNode1));
+		newNode->data = arr[i];
+		newNode->freq = 0;
+		newNode->prior = pre;
+		newNode->next = NULL;
+		p->next = newNode;
+		pre = p;
+		p = p->next;
+	}
 
-	sortByLocate(DL);
+	//打印这个双向单链表节点格式为  data[freq]
+	p = DL->next;
+	printf("DLinkList1[DL]: ");
+	while (p->next) {
+		printf("%d[%d]-->",p->data,p->freq);
+		p = p->next;
+	}
+	printf("%d[%d]\n",p->data,p->freq);
+
+	DNode1 *d1 = LocateElem(DL, 12);
+
+
+
+
+	//sortByLocate(DL);
 }
 
 

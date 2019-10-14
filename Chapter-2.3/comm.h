@@ -21,6 +21,7 @@ void printDLinkList(DLinkList DL);
 void printDlinkListInvert(DLinkList DL);
 void quickSort(int arr[], int low, int high);
 int getLinkLength(LinkList L);
+DNode1* LocateElem(DLinkList1 DL, int data);
 
 
 
@@ -49,4 +50,4 @@ extern bool isSubsequence(LinkList A, LinkList B);  //题 2.3.16
 extern bool isSymmetryDLink(CDLinkList DL);          //题 2.3.17
 extern void jointAB(LinkList& A, LinkList& B);  //题 2.3.18
 extern void asecdingOutPut(LinkList& L);  //题 2.3.19
-extern DLinkList sortByLocate(DLinkList& DL);  //题 2.3.20
+extern DLinkList1 sortByLocate(DLinkList1& DL);  //题 2.3.20

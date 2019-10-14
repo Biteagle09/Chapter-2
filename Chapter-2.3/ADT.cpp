@@ -189,3 +189,14 @@ int getLinkLength(LinkList L) {
 	}
 	return len;
 }
+
+
+
+//6-1、定位一个元素的位置，在链表中，返回一个组织向它的指针(题2.3.20专用)
+DNode1* LocateElem(DLinkList1 DL, int data) {
+	DNode1* p = DL->next;
+	while (p && p->data != data) {
+		p = p->next;
+	}
+	return p;
+}

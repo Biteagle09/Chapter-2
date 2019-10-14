@@ -26,7 +26,6 @@ void asecdingOutPut(LinkList &L) {
 		printf("%d-->", minp->data);
 		minpre->next = minp->next;
 		free(minp);
-		
 	}
 	printf("\n");
 }

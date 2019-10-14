@@ -9,7 +9,11 @@
 2°¢À„∑®ÀºœÎ£∫
 	1°„£∫
 **********************************************************************************************/
-DLinkList sortByLocate(DLinkList &DL) {
+DLinkList1 sortByLocate(DLinkList1 &DL) {
+
+
+
+
 
 	return DL;
 }

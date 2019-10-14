@@ -76,3 +76,14 @@ typedef struct StNode {
 
 
 
+
+
+//题2.3.20专用结构体
+typedef struct DNode1 {
+	int data;                 //数据域
+	struct DNode1 *prior;    //前驱指针
+	struct DNode1 *next;     //后继指针
+	int freq;                //访问频度域
+}DNode1, *DLinkList1;
+
+
